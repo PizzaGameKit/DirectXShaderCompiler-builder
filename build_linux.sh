@@ -33,7 +33,7 @@ echo "Build DXC"
 
 cmake --build $dxcBuild --target dxc > "$logFolder/dxc.bin.log"
 
-cp -f "$dxcBuild/Release/bin/dxc-3.7" "$outputFolder/dxc"
-cp -f "$dxcBuild/Release/lib/libdxcompiler.so" "$outputFolder/libdxcompiler.so"
+cp -f "$dxcBuild/bin/dxc" "$outputFolder/dxc"
+cp -f "$dxcBuild/lib/libdxcompiler.so" "$outputFolder/libdxcompiler.so"
 
 echo -e "\tDone"
