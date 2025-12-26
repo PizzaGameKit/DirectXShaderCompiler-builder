@@ -24,7 +24,7 @@ echo "Generate DXC"
 
 rm -r -f $dxcBuild
 
-cmake -S $dxcPath -B $dxcBuild -C "$dxcPath/cmake/caches/PredefinedParams.cmake" > "$logFolder/dxc.gen.log"
+cmake -S $dxcPath -B $dxcBuild -C "$dxcPath/cmake/caches/PredefinedParams.cmake" -DCMAKE_BUILD_TYPE=Release > "$logFolder/dxc.gen.log"
 
 echo -e "\tDone"
 

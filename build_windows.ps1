@@ -70,7 +70,7 @@ Write-Host "Generate DXC" -ForegroundColor DarkCyan
 	Remove-Item $dxcBuild -Recurse -ErrorAction SilentlyContinue
 	if (!(Test-Path -Path $dxcBuild)) {New-Item $dxcBuild -Type Directory >$null}
 
-	cmake -S $dxcPath -B $dxcBuild -C "$dxcPath/cmake/caches/PredefinedParams.cmake" -G "Visual Studio 17 2022" -A $cmake_arch -D CMAKE_MSVC_RUNTIME_LIBRARY=MultiThreaded | Out-File -FilePath "$logFolder/dxc.gen.log" -Append
+	cmake -S $dxcPath -B $dxcBuild -C "$dxcPath/cmake/caches/PredefinedParams.cmake" -G "Visual Studio 17 2022" -A $cmake_arch -DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreaded | Out-File -FilePath "$logFolder/dxc.gen.log" -Append
 
 	Write-Host "`tDone"
 
