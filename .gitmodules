@@ -1,0 +1,3 @@
+[submodule "DirectXShaderCompiler"]
+	path = DirectXShaderCompiler
+	url = https://github.com/PizzaGameKit/DirectXShaderCompiler.git
